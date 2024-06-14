@@ -1,6 +1,7 @@
 #pragma once
 
 #include "AEWindow.hpp"
+#include "AEPipeline.hpp"
 
 namespace AE {
 
@@ -13,6 +14,7 @@ namespace AE {
 			void run();
 
 		private:
-			AEWindow _AEWindow{ WIDTH, HEIGHT, "Hello Vulkan!" };
+			AEWindow _AEWindow { WIDTH, HEIGHT, "Hello Vulkan!" };
+			AEPipeline _AEPipeline{ "simple_shader.vert.spv", "simple_shader.frag.spv" };
 	};
 }
